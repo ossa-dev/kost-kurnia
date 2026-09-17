@@ -1,0 +1,25 @@
+# File catatan & draf pribadi
+note.txt
+*.tmp
+*.bak
+draft/
+
+# File konfigurasi lingkungan & kredensial rahasia (jika nanti ada)
+.env
+*.local
+
+# Pengaturan editor & IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Sampah sistem operasi
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Log & file temporer
+*.log
+npm-debug.log*
