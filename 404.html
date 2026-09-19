@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Tidak Ditemukan (404) | Kost Kurnia</title>
+    <meta
+      name="description"
+      content="Halaman yang kamu cari tidak ditemukan. Kembali ke beranda Kost Kurnia untuk melihat kamar yang tersedia."
+    />
+    <!-- Halaman error tidak perlu muncul di hasil pencarian -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#180d39" />
+
+    <link rel="icon" href="data:," />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Path diawali "/" karena halaman ini disajikan untuk alamat apa pun yang salah, termasuk yang bertingkat -->
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body class="page-error">
+    <!-- ============ NAVBAR ============ -->
+    <header class="site-nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="/">Kost <em>Kurnia</em></a>
+      </div>
+    </header>
+
+    <!-- ============ PESAN ERROR ============ -->
+    <main class="error-page">
+      <div class="wrap error-inner">
+        <p class="error-code" aria-hidden="true">
+          <span>4</span>
+          <span class="error-door"><i class="fa-solid fa-door-open"></i></span>
+          <span>4</span>
+        </p>
+
+        <h1>Halaman ini tidak ditemukan</h1>
+        <p class="error-text">
+          Alamat yang kamu buka mungkin salah ketik, atau halamannya sudah dipindahkan. Kembali ke beranda untuk melihat
+          kamar yang tersedia, atau tanya langsung lewat WhatsApp.
+        </p>
+
+        <div class="hero-actions error-actions">
+          <a href="/" class="btn btn-ink"> <i class="fa-solid fa-house"></i> Kembali ke Beranda </a>
+          <a
+            href="https://wa.me/6285179972899?text=Halo%20Kost%20Kurnia%2C%20saya%20mau%20tanya%20info%20kamar"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-outline"
+          >
+            <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============ SUB-FOOTER (COPYRIGHT & CREDIT ZZA-TECH) ============ -->
+    <div class="sub-footer">
+      <div class="wrap sub-footer-inner">
+        <!-- Tahun otomatis mengikuti tahun berjalan (diisi oleh js/main.js) -->
+        <span class="copyright">&copy; <span id="year">2026</span> Kost Kurnia Semarang. Hak cipta dilindungi.</span>
+
+        <span class="copyright copyright-note">Sistem informasi dan profil digital ini didukung oleh</span>
+
+        <a href="https://zzatech.pythonanywhere.com/" target="_blank" rel="noopener" class="credit">
+          <img src="/assets/img/icon_zzaTech.webp" alt="" class="credit-logo" />
+          <span>ZZA-TECH</span>
+        </a>
+      </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

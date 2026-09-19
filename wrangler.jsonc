@@ -1,0 +1,12 @@
+{
+  // Nama harus sama dengan nama Worker di dashboard Cloudflare
+  // (alamat kost-kurnia.zzatech.workers.dev berarti nama Worker-nya "kost-kurnia").
+  "name": "kost-kurnia",
+  "compatibility_date": "2026-09-19",
+  "assets": {
+    // Situs statis berada di root repo, jadi file non-publik dikecualikan lewat .assetsignore
+    "directory": "./",
+    // Alamat yang tidak ditemukan dijawab dengan status 404 dan menampilkan 404.html
+    "not_found_handling": "404-page"
+  }
+}

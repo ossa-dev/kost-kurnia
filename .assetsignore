@@ -1,0 +1,36 @@
+# File di sini TIDAK ikut diunggah ke Cloudflare, jadi tidak bisa dibuka publik.
+# Formatnya sama dengan .gitignore.
+
+# Konfigurasi & dokumentasi repo
+.assetsignore
+wrangler.jsonc
+README.md
+.gitignore
+.git
+.github/
+
+# Catatan & draf pribadi
+note.txt
+sandbox/
+draft/
+*.tmp
+*.bak
+
+# Kredensial & konfigurasi lokal
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.local
+
+# Dependensi, cache, dan editor
+node_modules/
+.wrangler/
+.vscode/
+.idea/
+
+# Sampah sistem operasi
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini

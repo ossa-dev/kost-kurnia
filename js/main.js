@@ -1,5 +1,9 @@
+/*
+  Kost Kurnia — main.js
+  Dipakai di index.html dan 404.html. Setiap fitur memeriksa dulu apakah
+  elemennya ada, jadi aman dijalankan di halaman yang tidak memilikinya.
+*/
 document.addEventListener('DOMContentLoaded', () => {
-
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -9,12 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.getElementById('navLinks');
 
   if (navToggle && navLinks) {
+    const setMenuOpen = (isOpen) => {
+      navLinks.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    };
+
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      setMenuOpen(!navLinks.classList.contains('open'));
     });
     // Close the mobile menu after tapping a link
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuOpen(false));
     });
   }
 
@@ -23,19 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const navAnchors = document.querySelectorAll('.nav-link');
 
   const setActiveLink = (id) => {
-    navAnchors.forEach(a => {
+    navAnchors.forEach((a) => {
       a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
     });
   };
 
   if ('IntersectionObserver' in window && sections.length) {
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) setActiveLink(entry.target.id);
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveLink(entry.target.id);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px', threshold: 0 },
+    );
 
-    sections.forEach(sec => spy.observe(sec));
+    sections.forEach((sec) => spy.observe(sec));
   }
 
   /* ---------- Toast feedback ---------- */
@@ -53,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const shareData = {
     title: document.title,
     text: 'Kost Kurnia, kost nyaman di tengah Kota Semarang. Cek kamar yang tersedia:',
-    url: window.location.href
+    url: window.location.href,
   };
 
   const handleShare = async () => {
@@ -128,5 +140,4 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
     });
   }
-
 });
